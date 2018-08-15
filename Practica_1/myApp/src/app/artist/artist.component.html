@@ -1,0 +1,37 @@
+<div>
+
+  <h1>Artist List</h1>
+
+
+  <table class="table">
+    <thead>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Geners</th>
+      <th scope="col">Images</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artista of artistas; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{artista._id}}</td>
+          <td>{{artista.name}}</td>
+          <td>{{artista?.geners}}</td>
+          <td>{{artista?.images}}</td>
+          <td><button class="btn btn-info" (click)="edit(artista)">Edit</button></td>
+          <!--
+            <td><button class="btn btn-warning" ng-click="edit(artista._id)" >Edit </button></td>
+            <td><button class="btn btn-warning" (click)="delete(".{{artista._id}}.")">Delete</button></td>
+            <td><input type="submit" name="login" class="btn btn-warning" value="Edit"></td>
+            <td><input type="submit" name="login" class="btn btn-danger" value="Delete"></td>
+          -->
+      </tr>
+      
+    </tbody>
+
+  </table>
+
+
+</div>
